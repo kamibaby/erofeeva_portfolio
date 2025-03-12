@@ -5,102 +5,202 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио Маркетолога</title>
     <style>
-        /* Встроенные стили CSS */
+        /* Ультрасовременные стили */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background: linear-gradient(120deg, #f6f9fc, #e4ecf1);
             color: #333;
+            line-height: 1.8;
+            overflow-x: hidden; /* Защита от горизонтальной прокрутки */
         }
-
+    
         .container {
-            width: 80%;
+            width: 90%;
+            max-width: 1200px;
             margin: auto;
-            overflow: hidden;
         }
-
+    
+        /* Header */
         header {
-            background: #333;
+            background: linear-gradient(135deg, #7f5af0, #2cb67d);
             color: #fff;
-            padding: 1rem 0;
+            padding: 4rem 2rem;
             text-align: center;
+            border-bottom: 4px solid #2cb67d;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%); /* Эффект необычного среза */
         }
-
-        header .language-switcher {
-            margin-bottom: 1rem;
-        }
-
-        header .language-switcher a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
-
+    
         header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+            font-size: 4rem;
+            font-weight: 700;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 0.5rem;
         }
-
+    
         header p {
-            margin: 0.5rem 0;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+            font-weight: 300;
+            opacity: 0.95;
         }
-
+    
+        header .language-switcher {
+            margin-top: 2rem;
+        }
+    
+        header .language-switcher button {
+            background: #fff;
+            color: #2cb67d;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            margin: 0 8px;
+            cursor: pointer;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        header .language-switcher button:hover {
+            background: #2cb67d;
+            color: #fff;
+            transform: scale(1.1);
+            box-shadow: 0 4px 14px rgba(44, 182, 125, 0.5);
+        }
+    
+        /* Navigation */
         nav ul {
             list-style: none;
             padding: 0;
             display: flex;
             justify-content: center;
-            margin-top: 1rem;
+            gap: 1.5rem;
+            margin: 2rem 0 0;
         }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
+    
         nav ul li a {
             color: #fff;
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 0.7rem 1.2rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            transition: background 0.3s ease, transform 0.2s ease;
         }
-
+    
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: translateY(-3px);
+        }
+    
+        /* Sections */
         section {
-            padding: 2rem 0;
-        }
-
-        section#about {
-            background: #e7f3fe;
-        }
-
-        .case {
-            margin-bottom: 2rem;
-        }
-
-        .case img {
-            max-width: 100%;
-            display: block;
-            margin: 1rem 0;
-        }
-
-        footer {
-            background: #333;
-            color: #fff;
+            padding: 3rem 2rem;
             text-align: center;
-            padding: 1rem 0;
         }
-
-        footer a {
-            color: #4caf50;
+    
+        section#about {
+            background: #ffffff;
+            padding: 4rem 2rem;
+            margin: 3rem auto;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            max-width: 900px;
+            line-height: 1.8;
+            text-align: left;
+        }
+    
+        section#about h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+    
+        section#about p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+    
+        /* Case Cards */
+        .case {
+            background: #fff;
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            margin-bottom: 3rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+    
+        .case img {
+            flex: 1;
+            max-width: 100%;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+        }
+    
+        .case-content {
+            flex: 2;
+        }
+    
+        .case:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+    
+        .case h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+    
+        .case p {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+    
+        .case a {
             text-decoration: none;
+            color: #7f5af0;
+            font-weight: 600;
+            transition: color 0.3s ease;
         }
-
+    
+        .case a:hover {
+            color: #2cb67d;
+        }
+    
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #333, #555);
+            color: #eee;
+            text-align: center;
+            padding: 2rem;
+            font-size: 1rem;
+            margin-top: 3rem;
+        }
+    
+        footer a {
+            color: #7f5af0;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+    
         footer a:hover {
-            text-decoration: underline;
+            color: #2cb67d;
+            text-shadow: 0 2px 6px rgba(255, 255, 255, 0.3);
         }
     </style>
-
+     
+    
     <!-- Google Translate script -->
     <script type="text/javascript">
         function googleTranslateElementInit() {
@@ -168,6 +268,11 @@
                 <img src="project5.jpg" alt="Проект 5">
                 <p>Описание: Участвовала в создании пиар-стратегии для дейтингового приложения Flero, писала пресс-релизы, вела взаимодействие с журналистами, администраторами релевантных сообществ. <br> <br>  Результат: Повысилась узнаваемость бренда. </p>
                 <a href="https://t.me/dankmarketing/13030" target="_blank">Подробнее</a>
+            </div>
+            <div class="case">
+                <h3>SMM-работы</h3>
+                <a href="https://drive.google.com/drive/u/0/folders/1tIBzuaeMY_1LVVBtBmrrM3Uuyn37meCc" target="_blank">Издательство «Обложка»</a>
+                <br> <br> <a href="https://drive.google.com/drive/u/0/folders/15HiqW8JoOmnMg2jenSxLMMyGrzkLjwQ8" target="_blank">Издательский Дом Мещерякова</a>
             </div>
         </div>
     </section>
