@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио Маркетолога</title>
-    <style>
-    /* Общие стили (ваши текущие) */
+  <style>
     body {
         font-family: 'Poppins', sans-serif;
         margin: 0;
@@ -13,7 +12,7 @@
         background: linear-gradient(120deg, #f6f9fc, #e4ecf1);
         color: #333;
         line-height: 1.8;
-        overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+        overflow-x: hidden;
     }
 
     .container {
@@ -22,59 +21,52 @@
         margin: auto;
     }
 
+    header {
+        background: linear-gradient(135deg, #7f5af0, #2cb67d);
+        color: #fff;
+        padding: 4rem 2rem;
+        text-align: center;
+        border-bottom: 4px solid #2cb67d;
+    }
+
     header h1 {
         font-size: 4rem;
         font-weight: 700;
     }
 
-    /* Адаптация для экранов до 768px */
-    @media (max-width: 768px) {
-        body {
-            padding: 0;
-        }
+    header p {
+        font-size: 1.5rem;
+    }
 
+    @media (max-width: 1024px) {
         header h1 {
-            font-size: 2.5rem; /* Уменьшаем заголовки */
+            font-size: 3rem;
         }
-
         header p {
-            font-size: 1.2rem; /* Делаем текст меньше */
-        }
-
-        .container {
-            padding: 10px; /* Уменьшаем внутренние отступы */
-        }
-
-        nav ul {
-            flex-direction: column; /* Меняем навигацию на вертикальный вид */
-            gap: 10px;
-        }
-
-        .case {
-            flex-direction: column; /* Изменяем вид карточек на мобильных */
-            align-items: flex-start;
-        }
-
-        .case img {
-            width: 100%; /* Изображения растягиваются на ширину контейнера */
+            font-size: 1.3rem;
         }
     }
 
-    /* Адаптация для экранов до 480px */
+    @media (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+            gap: 10px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+        }
+    }
+
     @media (max-width: 480px) {
         header h1 {
-            font-size: 2rem; /* Ещё меньше для маленьких экранов */
+            font-size: 2rem;
         }
-
         header p {
-            font-size: 1rem; /* Соответственно уменьшаем текст */
-        }
-
-        footer {
-            font-size: 0.8rem; /* Делаем текст в футере меньше */
+            font-size: 1rem;
         }
     }
 </style>
+
     
     <!-- Google Translate script -->
     <script type="text/javascript">
