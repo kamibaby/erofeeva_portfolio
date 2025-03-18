@@ -4,68 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио Маркетолога</title>
-  <style>
-    body {
-        font-family: 'Poppins', sans-serif;
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(120deg, #f6f9fc, #e4ecf1);
-        color: #333;
-        line-height: 1.8;
-        overflow-x: hidden;
-    }
+<style>
+        /* Общие стили */
+        :root {
+            --primary-color: #7f5af0; /* Основной цвет */
+            --secondary-color: #2cb67d; /* Акцентный цвет */
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --heading-color: #222;
+        }
 
-    .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: auto;
-    }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.8;
+        }
 
-    header {
-        background: linear-gradient(135deg, #7f5af0, #2cb67d);
-        color: #fff;
-        padding: 4rem 2rem;
-        text-align: center;
-        border-bottom: 4px solid #2cb67d;
-    }
+        h1, h2, h3 {
+            color: var(--heading-color);
+            font-weight: 700;
+            line-height: 1.2;
+        }
 
-    header h1 {
-        font-size: 4rem;
-        font-weight: 700;
-    }
+        p {
+            font-size: 1.1rem;
+            margin: 0 0 1.5rem 0;
+        }
 
-    header p {
-        font-size: 1.5rem;
-    }
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
 
-    @media (max-width: 1024px) {
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            text-align: center;
+            padding: 3rem 1rem;
+            border-bottom: 5px solid var(--secondary-color);
+        }
+
         header h1 {
             font-size: 3rem;
+            margin: 0;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
         }
+
         header p {
             font-size: 1.3rem;
+            margin: 1rem 0 0;
         }
-    }
 
-    @media (max-width: 768px) {
+        /* Навигация */
+        nav {
+            margin-top: 2rem;
+        }
+
         nav ul {
-            flex-direction: column;
-            gap: 10px;
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
         }
-        header h1 {
-            font-size: 2.5rem;
-        }
-    }
 
-    @media (max-width: 480px) {
-        header h1 {
-            font-size: 2rem;
+        nav ul li a {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            color: #fff;
         }
-        header p {
+
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Основной контент */
+        section {
+            padding: 3rem 1rem;
+        }
+
+        section#about {
+            background: #fff;
+            padding: 4rem 2rem;
+            margin: 2rem auto;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        section#about h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        section#about p {
+            font-size: 1.1rem;
+            color: var(--text-color);
+        }
+
+        /* Карточки */
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
             font-size: 1rem;
         }
-    }
-</style>
+
+        /* Футер */
+        footer {
+            background: #222;
+            color: #eee;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Медиа-запросы для адаптивности */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .card {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+        }
+    </style>
 
     
     <!-- Google Translate script -->
