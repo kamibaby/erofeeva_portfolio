@@ -1,30 +1,29 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио Маркетолога</title>
+    <title>marketing experience</title>
  <style>
         /* Цветовая палитра */
         :root {
-            --primary-color: #FF6F3C; /* Яркий акцентный оранжевый */
-            --secondary-color: #292929; /* Темно-серый для контраста */
-            --background-color: #FDFDFD; /* Светлый фон */
-            --text-color: #444; /* Нейтральный текст */
-            --case-highlight-color: rgba(255, 111, 60, 0.1); /* Мягкий акцент на кейсах */
+            --primary-color: #CC0A0A; /* Яркий акцентный красный */
+            --secondary-color: #FFFFFF; /* Белый */
+            --background-color: #E8E0CD; /* Бежевый фон */
+            --text-color: #123262; /* Нейтральный текст, свой синий цвет */
         }
 
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: var(--background-color);
+            background: var(--secondary-color);
             color: var(--text-color);
             line-height: 1.8;
         }
 
         h1, h2 {
-            color: var(--secondary-color);
+            color: var(--background-color);
             margin-bottom: 1rem;
             font-weight: 600;
         }
@@ -38,6 +37,17 @@
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 1rem;
+            color: #123262;
+        }
+
+        a {
+            color: #123262;        /* заменяет синий цвет на оранжевый */
+            text-decoration: yes; /* убирает подчёркивание */
+        }
+
+        a:hover {
+            color: #CC0A0A;         /* при наведении — другой цвет */
+            text-decoration: underline; /* можно вернуть подчёркивание */
         }
 
         /* Header */
@@ -72,29 +82,32 @@
         }
 
         .case {
-            background: #fff;
-            border: 1px solid var(--primary-color);
+            background: #E8E0CD;
+            border: 1px solid var(--text-color);
             border-radius: 8px;
             padding: 1.5rem;
             text-align: center;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0.5; /* от 0 (полностью прозрачно) до 1 (полностью видно) */
         }
 
         .case:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            opacity: 1; /* от 0 (полностью прозрачно) до 1 (полностью видно) */
         }
 
         .case h3 {
             font-size: 1.5rem;
-            color: var(--primary-color);
+            color: E8E0CD;
             margin-bottom: 1rem;
         }
 
         .case p {
             font-size: 1rem;
             color: var(--text-color);
+            text-align: justify;
         }
 
         .case img {
@@ -109,12 +122,7 @@
             text-align: center;
             padding: 2rem 1rem;
             background: var(--secondary-color);
-            color: #fff;
-        }
-
-        footer a {
-            color: var(--primary-color);
-            text-decoration: none;
+            line-height: 0.6;
         }
 
         /* Адаптивность */
@@ -141,87 +149,104 @@
                 font-size: 1.3rem;
             }
         }
+
     </style>
 
-    
-    <!-- Google Translate script -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'ru'}, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</head>
+
+<!-- Google Translate script -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+      pageLanguage: 'en'
+      },
+      'google_translate_element'
+   );
+  }
+</script>
+<script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+
 <body>
-    <!-- Переключатель языков -->
-    <header>
-        <div class="language-switcher">
-            <div id="google_translate_element"></div> <!-- Google Translate dropdown -->
-        </div>
-        <div class="container">
-            <h1>Камилла Ерофеева</h1>
-            <p>Портфолио Камиллы Ерофеевой</p>
-            <nav>
-                <ul>
-                    <li><a href="#about">Обо мне</a></li>
-                    <li><a href="#cases">Кейсы</a></li>
-                    <li><a href="#contact">Контакты</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
-    <section id="about">
-        <div class="container">
-            <h2>Обо мне</h2>
-            <p>Я — начинающий маркетолог, увлечённый созданием стратегий, которые помогают брендам выделяться. С 2021 года я успела погрузиться в мир издательской индустрии, сотрудничая с двумя издательствами: Издательский Дом Мещерякова и Обложка. В этих проектах я научилась разрабатывать рекламные кампании, работать с аудиторией и продвигать продукты, которые вдохновляют. <br> <br> В 2024 году я прошла стажировку в IT-стартапе Tooba и PR-агентстве Rassvet.digital, где получила ценный профессиональный опыт. В агентстве я работала в роли стажёра-пиарщика, изучая основы PR и вовлекаясь в создание и продвижение брендов. В Tooba я была стажёром в отделе маркетинга, где занималась анализом данных, разработкой креативных идей и написанием сценариев. Кроме того, я активно взаимодействовала с благотворительными фондами, что позволило мне понять важность социальной составляющей в бизнесе. Этот опыт дал мне возможность не только изучить внутренние процессы работы в агентствах, но и почувствовать, как строятся эффективные стратегии в маркетинге и PR. <br> <br> Моя цель — развиваться в маркетинге, используя полученные знания и привнося креативный подход в каждый проект. Если вы ищете специалиста, который с энтузиазмом и свежим взглядом возьмётся за продвижение вашего бренда, давайте обсудим сотрудничество!</p>
-        </div>
-    </section>
-    
-    <section id="cases">
-        <div class="container">
-            <h2>Мои кейсы</h2>
-            <div class="case">
-                <h3>Проект 1: Продвижение биографического романа «Принц Модильяни»</h3>
-                <p>Описание: Создала комплексную стратегию продвижения романа, включая разработку бумажного буклета, организацию оффлайн-мероприятий со спикерами и актёрами, блогерскую рассылку и выпуск брендированного мерча. <br> <br> Результат: Книга стала продаваться органически, к 2024 году вышло 4 тиража, а узнаваемость среди читателей значительно возросла.</p>
-                <a href="https://www.google.com/search?q=%D0%BF%D1%80%D0%B8%D0%BD%D1%86+%D0%BC%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D1%8F%D0%BD%D0%B8&newwindow=1&client=safari&sca_esv=3cbb991dc4cf362e&rls=en&udm=2&biw=1252&bih=620&sxsrf=AHTn8zpYHGFMcJdqe3BHI76_5ByaXL3Hew%3A1741803061378&ei=Nc7RZ6TjFuTri-gPvvqN0QQ&ved=0ahUKEwjk0feFkoWMAxXk9QIHHT59I0oQ4dUDCBE&uact=5&oq=%D0%BF%D1%80%D0%B8%D0%BD%D1%86+%D0%BC%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D1%8F%D0%BD%D0%B8&gs_lp=EgNpbWciHdC_0YDQuNC90YYg0LzQvtC00LjQu9GM0Y_QvdC4MgcQIxgnGMkCMgcQIxgnGMkCMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARIrAdQrwVYrwVwAXgAkAEAmAHYAaAB2AGqAQMyLTG4AQPIAQD4AQGYAgGgAucBmAMAiAYBkgcDMi0xoAewCw&sclient=img" target="_blank">Подробнее</a>
-            </div>
-            <div class="case">
-                <h3>Проект 2: Благотворительный проект «ДОБРО_ИДМ»</h3>
-                <p>Описание: Инициировала и реализовала проект, в рамках которого издательство отправляет книги сельским библиотекам. Разработала механику акции, вела взаимодействие с библиотекарями и читателями, занималась отправкой и контентным сопровождением проекта. <br> <br>  Результат: С июля 2022 года отправлено около 1500 книг (к началу 2025 года). В 2023 году к акции присоединились читатели, что увеличило количество библиотек, которым за раз можем отправить посылки. Например, вместо трёх сельских библиотек будет 13.</p>
-                <a href="https://vk.com/idmkniga?w=wall-34249553_99544" target="_blank">Подробнее</a>
-            </div>
-            <div class="case">
-                <h3>Проект 3: Увеличение вовлечённости и аудитории соцсетей Издательского Дома Мещерякова</h3>
-                <p>Описание: Регулярно проводила розыгрыши, разрабатывала контент для ВКонтакте и Telegram, а также поддерживала активность аудитории через посты и мероприятия. <br> <br>  Результат: Аудитория ВКонтакте выросла более чем на 10.000 подписчиков, а Telegram — на 1.500 человек, что укрепило лояльность читателей.</p>
-                <a href="https://vk.com/idmkniga" target="_blank">Вконтакте</a>
-                <a href="https://t.me/idm_kniga" target="_blank">Telegram</a>
-            </div>
-            <div class="case">
-                <h3>Проект 4: Креативный подход к офлайн-мероприятию «Вечеринка у Рудольфа»</h3>
-                <p>Описание: Разработала прогрев мероприятия через 5 уникальных видеороликов с трендовым монтажом, занималась созданием афиш совместно с дизайнером и их расклейкой по Москве с коллегой, а также активным продвижением в соцсетях и у блогеров. <br> <br>  Результат: Мероприятие привлекло широкую аудиторию, а формат кампании получил положительные отзывы благодаря оригинальному подходу и креативности.</p>
-                <a href="https://www.youtube.com/watch?v=Bo1Glr3IXn8" target="_blank">Подробнее</a>
-            </div>
-            <div class="case">
-                <h3>Проект 5: Работа с PR и продвижением бренда Flero</h3>
-                <p>Описание: Участвовала в создании пиар-стратегии для дейтингового приложения Flero, писала пресс-релизы, вела взаимодействие с журналистами, администраторами релевантных сообществ. <br> <br>  Результат: Повысилась узнаваемость бренда. </p>
-                <a href="https://t.me/dankmarketing/13030" target="_blank">Подробнее</a>
-            </div>
-            <div class="case">
-                <h3>SMM-работы</h3>
-                <a href="https://drive.google.com/drive/u/0/folders/1tIBzuaeMY_1LVVBtBmrrM3Uuyn37meCc" target="_blank">Издательство «Обложка»</a>
-                <br> <a href="https://drive.google.com/drive/u/0/folders/15HiqW8JoOmnMg2jenSxLMMyGrzkLjwQ8" target="_blank">Издательский Дом Мещерякова</a>
-            </div>
-        </div>
-    </section>
-    
-    <footer id="contact">
-        <div class="container">
-            <h2>Контакты</h2>
-            <p>Email: kamilla.erofeeva@gmail.com</p>
-            <p>Telegram: @kamillaerofeevaonline</p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/kamilla-erofeeva" target="_blank">Камилла Ерофеева</a></p>
-        </div>
-    </footer>
+<header>
+  <div class="container">
+    <h1>marketing experience</h1>
+    <p>Kamilla Erofeeva</p>
+    <nav>
+      <a href="#about">about me •</a>
+      <a href="#cases">my cases •</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container">
+    <h2>ABOUT ME</h2>
+    <p>I am an aspiring marketer passionate about creating strategies that help brands stand out. Since 2021, I’ve had the opportunity to dive into the publishing industry, working with two publishing houses: Meshcheryakov`s Publishing House and Oblozhka. Through these projects, I learned how to develop advertising campaigns, engage with audiences, and promote inspiring products.</p>
+    <p>In 2024, I completed internships at the IT startup Tooba and the PR agency Rassvet.digital, where I gained valuable hands-on experience. At Rassvet.digital, I worked as a PR intern, exploring the fundamentals of public relations and contributing to brand building and promotion. At Tooba, I was part of the marketing team, focusing on data analysis, creative ideation, and scriptwriting. I also collaborated closely with charitable foundations, which helped me understand the importance of social responsibility in business. This experience allowed me to explore the inner workings of both agencies and gain insight into building effective marketing and PR strategies.</p>
+    <p>My goal is to grow in the field of marketing by applying my knowledge and bringing a creative perspective to every project. If you're looking for someone enthusiastic and fresh-minded to help promote your brand — let’s connect!</p>
+  </div>
+</section>
+
+<section id="cases">
+  <div class="container">
+    <h2>MY CASES</h2>
+    <div class="case">
+    <h3>Project 1: Promotion of the Biographical Novel “Prince Modigliani”</h3>
+    <p><strong>Description:</strong> I developed a comprehensive promotional strategy for the novel, which included creating a printed booklet, organizing offline events with speakers and actors, sending out blogger kits, and launching branded merchandise. <br><br>
+    <strong>Result:</strong> The book began to sell organically. By 2024, four editions had been released, and the novel gained significant recognition among readers.</p>
+    <a href="https://www.google.com/search?q=%D0%BF%D1%80%D0%B8%D0%BD%D1%86+%D0%BC%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D1%8F%D0%BD%D0%B8&newwindow=1&client=safari&sca_esv=3cbb991dc4cf362e&rls=en&udm=2&biw=1252&bih=620&sxsrf=AHTn8zpYHGFMcJdqe3BHI76_5ByaXL3Hew%3A1741803061378&ei=Nc7RZ6TjFuTri-gPvvqN0QQ&ved=0ahUKEwjk0feFkoWMAxXk9QIHHT59I0oQ4dUDCBE&uact=5&oq=%D0%BF%D1%80%D0%B8%D0%BD%D1%86+%D0%BC%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D1%8F%D0%BD%D0%B8&gs_lp=EgNpbWciHdC_0YDQuNC90YYg0LzQvtC00LjQu9GM0Y_QvdC4MgcQIxgnGMkCMgcQIxgnGMkCMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARIrAdQrwVYrwVwAXgAkAEAmAHYAaAB2AGqAQMyLTG4AQPIAQD4AQGYAgGgAucBmAMAiAYBkgcDMi0xoAewCw&sclient=img" target="_blank" rel="noopener noreferrer">Learn more</a>
+  </div>
+  <div class="case">
+    <h3>Project 2: Charity Initiative “DOBRO_IDM”</h3>
+    <p><strong>Description:</strong> I initiated and implemented a charity project where the publishing house sends books to rural libraries. I developed the campaign mechanics, coordinated with librarians and readers, managed shipments, and created content support for the project. <br><br>
+    <strong>Result:</strong> Since July 2022, around 1,500 books have been sent out (as of early 2025). In 2023, readers joined the initiative, which allowed us to significantly increase the number of libraries we could support at once — for example, from just 3 rural libraries per shipment to 13.</p>
+    <a href="https://vk.com/idmkniga?w=wall-34249553_99544" target="_blank" rel="noopener noreferrer">Learn more</a>
+  </div>
+    <div class="case">
+     <h3>Project 3: Growing Engagement and Social Media Audience for Meshcheryakov`s Publishing House</h3>
+     <p><strong>Description:</strong> I regularly organized giveaways, developed content for VKontakte and Telegram, and maintained audience engagement through posts and interactive events. <br><br>
+     <strong>Result:</strong> The VKontakte audience grew by over 10,000 followers, and the Telegram channel gained 1,500 subscribers — significantly strengthening reader loyalty.</p>
+     <a href="https://vk.com/idmkniga" target="_blank" rel="noopener noreferrer">VKontakte</a>
+     <a href="https://t.me/idm_kniga" target="_blank" rel="noopener noreferrer">Telegram</a>
+    </div>
+    <div class="case">
+      <h3>Project 4: Creative Approach to the Offline Event “Rudolf’s Party”</h3>
+      <p><strong>Description:</strong> I developed a warm-up campaign for the event using five unique, trend-edited videos; co-created posters with a designer and distributed them around Moscow with a colleague; and actively promoted the event on social media and through influencers. <br><br>
+      <strong>Result:</strong> The event attracted a large audience, and the campaign format received positive feedback for its originality and creativity.</p>
+      <a href="https://www.youtube.com/watch?v=Bo1Glr3IXn8" target="_blank" rel="noopener noreferrer">Learn more</a>
+    </div>
+    <div class="case">
+      <h3>Project 5: PR and Brand Promotion for Flero</h3>
+      <p><strong>Description:</strong> Took part in developing a PR strategy for the dating app Flero, wrote press releases, and communicated with journalists and administrators of relevant communities. <br><br>
+      <strong>Result:</strong> Brand awareness increased.</p>
+      <a href="https://t.me/dankmarketing/13030" target="_blank" rel="noopener noreferrer">Learn more</a>
+    </div>
+    <div class="case">
+      <h3>SMM-сases</h3>
+      <ul>
+        <li style="text-align: left;"><a href="https://drive.google.com/drive/u/0/folders/1tIBzuaeMY_1LVVBtBmrrM3Uuyn37meCc" target="_blank" rel="noopener noreferrer">Oblozhka</a></li>
+        <li style="text-align: left;"><a href="https://drive.google.com/drive/u/0/folders/15HiqW8JoOmnMg2jenSxLMMyGrzkLjwQ8" target="_blank" rel="noopener noreferrer">Meshcheryakov`s Publishing House</a></li>
+        <li style="text-align: left;"><a href="https://www.instagram.com/yeapkami/" target="_blank" rel="noopener noreferrer">Reels</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container">
+    <h2>CONTACT</h2>
+    <p>Email: kamilla.erofeeva@gmail.com</p>
+    <p>Telegram: @kamillaerofeevaonline</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/kamilla-erofeeva" target="_blank" rel="noopener noreferrer">Kamilla Erofeeva</a></p>  <!--rel="noopener noreferrer" для безопасности-->
+  </div>
+  <div class="language-switcher">
+    <div id="google_translate_element">
+    </div> <!-- Google Translate dropdown -->
+  </div>
+</footer>
 </body>
+</head>
 </html>
