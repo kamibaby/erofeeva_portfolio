@@ -1,0 +1,146 @@
+/* ---------- BASE ---------- */
+body {
+  margin: 0;
+  font-family: 'Source Serif Pro', serif;
+  color: black;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+  width: 100%;
+  padding: 30px 50px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+.logo span {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.nav a {
+  margin-left: 15px;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.nav a:hover {
+  transform: scale(1.1);
+}
+.nav .active { color: #AB0782; }
+
+/* ---------- HERO / TEXT ---------- */
+.hero {
+  max-width: 1500px;
+  padding: 200px 100px 80px;
+}
+.hero h1 {
+  font-size: clamp(24px, 3vw, 50px);
+  font-weight: 300;
+  line-height: clamp(28px, 3.5vw, 60px);
+}
+
+/* ---------- COMPANIES ---------- */
+.companies {
+  text-align: center;
+  padding: 80px 64px;
+  overflow: hidden;
+}
+.companies h2 {
+  font-size: clamp(24px, 4vw, 50px);
+  font-weight: 300;
+  color: rgba(0,0,0,0.55);
+}
+.logo-slider { overflow: hidden; }
+.logos {
+  display: flex;
+  width: max-content;
+  gap: 40px;
+  animation: slide 25s linear infinite;
+}
+.logos img {
+  width: 75px;
+  height: 64px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.logos img:hover { transform: scale(1.2); }
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ---------- PROJECTS ---------- */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  padding: 80px 64px;
+}
+.project-card {
+  flex: 1 1 300px;
+  border-top: 0.5px solid;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.project-card img { border-radius: 4px; width: 100%; height: auto; }
+.project-title { font-size: 16px; font-family: Source Code Pro; font-weight: 500; text-decoration: underline; line-height: 16.48px; }
+.project-name { font-size: 50px; font-family: Source Serif Pro; font-weight: 300; line-height: 60px; }
+.explore { padding: 4px 10px; outline-offset: -1px; cursor: pointer; }
+
+/* ---------- FOOTER ---------- */
+.footer {
+  border-top: 1px solid #4F4F4F;
+  padding: 80px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.footer-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 50px;
+  font-weight: 300;
+  text-decoration: underline;
+}
+.footer a.email { color: #AB0782; }
+.footer a.github { color: #5F00AD; }
+.footer a.linkedin { color: #0034AD; }
+.footer p { font-size: 30px; font-weight: 300; }
+
+/* ---------- ANIMATIONS ---------- */
+.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 1.2s ease-out, transform 1.2s ease-out; }
+.fade-in.appear { opacity: 1; transform: translateY(0); }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .hero h1, .companies h2, .project-title, .project-name, .footer-links { font-size: clamp(16px, 4vw, 24px); line-height: clamp(20px, 4.5vw, 32px); }
+  .footer-links { flex-direction: column; align-items: center; gap: 20px; }
+  .header { flex-direction: column; gap: 20px; }
+  .logos { animation: slide 15s linear infinite; }
+  .projects { gap: 32px; padding: 40px 20px; }
+  .project-card { padding: 20px 0; gap: 30px; }
+}

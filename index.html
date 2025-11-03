@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kamilla Erofeeva Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400&family=Source+Code+Pro:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header fade-in">
+  <div class="logo">
+    <img src="images/Kamilla.png" alt="Logo">
+    <span>Kamilla Erofeeva</span>
+  </div>
+  <nav class="nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="mailto:erofeevacooperation@gmail.com">Contact</a>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero fade-in">
+  <h1>My name is Kamilla Erofeeva. I`m a Product Manager with experience in EdTech, MedTech, digital content, and marketing, skilled in product discovery, user research, analytics, and campaign management.</h1>
+</section>
+
+<!-- Companies / Logos -->
+<section class="companies fade-in">
+  <h2>Companies I`ve collaborated with</h2>
+  <div class="logo-slider">
+    <div class="logos">
+      <img src="images/logo 1.png" alt="">
+      <img src="images/logo 2.png" alt="">
+      <img src="images/logo 3.png" alt="">
+      <img src="images/logo 4.png" alt="">
+      <img src="images/logo 5.png" alt="">
+      <img src="images/logo 6.png" alt="">
+      <img src="images/logo 7.png" alt="">
+      <img src="images/logo 8.png" alt="">
+      <!-- дублируем для бесшовной анимации -->
+      <img src="images/logo 1.png" alt="">
+      <img src="images/logo 2.png" alt="">
+      <img src="images/logo 3.png" alt="">
+      <img src="images/logo 4.png" alt="">
+      <img src="images/logo 5.png" alt="">
+      <img src="images/logo 6.png" alt="">
+      <img src="images/logo 7.png" alt="">
+      <img src="images/logo 8.png" alt="">
+
+      <img src="images/logo 1.png" alt="">
+      <img src="images/logo 2.png" alt="">
+      <img src="images/logo 3.png" alt="">
+      <img src="images/logo 4.png" alt="">
+      <img src="images/logo 5.png" alt="">
+      <img src="images/logo 6.png" alt="">
+      <img src="images/logo 7.png" alt="">
+      <img src="images/logo 8.png" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer fade-in">
+  <div class="footer-links">
+    <a href="mailto:erofeevacooperation@gmail.com" class="email">Email</a>
+    <a href="https://github.com/kamibaby" class="github">GitHub</a>
+    <a href="https://www.linkedin.com/in/kamilla-erofeeva/" class="linkedin">LinkedIn</a>
+  </div>
+  <p>© Kamilla Erofeeva 2025 All Rights Reserved</p>
+</footer>
+
+<script>
+  // Fade-in on scroll
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = { threshold: 0.3, rootMargin: "0px 0px -50px 0px" };
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('appear');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => appearOnScroll.observe(fader));
+</script>
+</body>
+</html>

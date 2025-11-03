@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kamilla Erofeeva Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400&family=Source+Code+Pro:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header fade-in">
+  <div class="logo">
+    <img src="images/Kamilla.png" alt="Logo">
+    <span>Kamilla Erofeeva</span>
+  </div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="mailto:erofeevacooperation@gmail.com">Contact</a>
+  </nav>
+</header>
+
+<!-- About Text -->
+<section class="hero fade-in">
+  <h1>
+    Throughout my work in EdTech, MedTech, and digital publishing, I`ve collaborated with cross-functional teams, translating user needs into product solutions, improving workflows, and driving engagement through data and storytelling.<br/><br/>
+    I enjoy working in dynamic environments where ideas grow through collaboration. I`m passionate about discovering what makes users tick, turning insights into meaningful features, and creating products that truly connect with people.
+  </h1>
+</section>
+
+<!-- Notion Projects -->
+
+<iframe src="https://kamilla-erofeeva-portfolio.notion.site/ebd/2105b0ea54758022ae60c7e3e8944c1b" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+
+<!-- Footer -->
+<footer class="footer fade-in">
+  <div class="footer-links">
+    <a href="mailto:erofeevacooperation@gmail.com" class="email">Email</a>
+    <a href="https://github.com/kamibaby" class="github">GitHub</a>
+    <a href="https://www.linkedin.com/in/kamilla-erofeeva/" class="linkedin">LinkedIn</a>
+  </div>
+  <p>© Kamilla Erofeeva 2025 All Rights Reserved</p>
+</footer>
+
+<script>
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = { threshold: 0.3, rootMargin: "0px 0px -50px 0px" };
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('appear');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+  faders.forEach(fader => appearOnScroll.observe(fader));
+</script>
+</body>
+</html>
