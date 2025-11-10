@@ -10,9 +10,9 @@ body {
 /* ---------- HEADER ---------- */
 .header {
   width: 100%;
-  padding: 20px 50px 30px;
+  padding: 20px 30px 30px;
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
   background: linear-gradient(90deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%);
   position: sticky;
@@ -22,6 +22,8 @@ body {
 
 .nav {
   margin-left: auto;
+  display: flex;
+  gap: 12px;
 }
 
 .logo {
@@ -47,11 +49,12 @@ body {
 }
 
 .nav a {
-  margin-left: 15px;
+  /* margin-left: 15px; */
   font-family: 'Source Code Pro', monospace;
-  font-size: 16px;
+  font-size: 14px;
   text-decoration: none;
   transition: 0.3s;
+  white-space: nowrap;
 }
 .nav a:hover {
   transform: scale(1.1);
