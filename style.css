@@ -149,3 +149,15 @@ body {
   .projects { gap: 32px; padding: 40px 20px; }
   .project-card { padding: 20px 0; gap: 30px; }
 }
+
+/* ---------- ABOUT PAGE ---------- */
+.about-page .hero {
+  padding: 80px 100px 40px;
+}
+
+/* For phone */
+@media (max-width: 768px) {
+  .about-page .hero {
+    padding: 60px 50px 30px;
+  }
+}
