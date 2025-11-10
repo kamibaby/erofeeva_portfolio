@@ -12,7 +12,7 @@ body {
   width: 100%;
   padding: 20px 30px 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   background: linear-gradient(90deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%);
   position: sticky;
@@ -21,7 +21,7 @@ body {
 }
 
 .nav {
-  margin-left: auto;
+  margin-left: 1800px;
   display: flex;
   gap: 12px;
 }
