@@ -10,26 +10,24 @@ body {
 /* ---------- HEADER ---------- */
 .header {
   width: 100%;
-  padding: 20px 30px 30px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   background: linear-gradient(90deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%);
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
-.nav {
-  margin-left: 800px;
+.header-content {
+  width: 100%;
+  max-width: 1400px;
   display: flex;
-  gap: 12px;
+  justify-content: space-between; /* логотип слева, навигация справа */
+  align-items: center;
+  padding: 20px 30px;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 15px;
 }
 
@@ -38,27 +36,29 @@ body {
   height: 50px;
   border-radius: 50%;
   box-shadow: 0 4px 4px rgba(0,0,0,0.25);
-  display: block;
-  margin: 0;
   object-fit: cover;
-  object-position: 50% 140%;
 }
+
 .logo span {
   font-size: 24px;
   font-weight: 400;
 }
 
+.nav {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
 .nav a {
-  /* margin-left: 15px; */
   font-family: 'Source Code Pro', monospace;
   font-size: 14px;
   text-decoration: none;
   transition: 0.3s;
   white-space: nowrap;
 }
-.nav a:hover {
-  transform: scale(1.1);
-}
+
+.nav a:hover { transform: scale(1.1); }
 .nav .active { color: #AB0782; }
 
 /* ---------- HERO / TEXT ---------- */
@@ -66,6 +66,7 @@ body {
   max-width: 1500px;
   padding: 150px 100px 80px;
 }
+
 .hero h1 {
   font-size: clamp(24px, 3vw, 50px);
   font-weight: 300;
@@ -78,25 +79,33 @@ body {
   padding: 80px 64px;
   overflow: hidden;
 }
+
 .companies h2 {
   font-size: clamp(24px, 4vw, 50px);
   font-weight: 300;
   color: rgba(0,0,0,0.55);
 }
-.logo-slider { overflow: hidden; }
+
+.logo-slider {
+  overflow: hidden;
+}
+
 .logos {
   display: flex;
   width: max-content;
   gap: 40px;
   animation: slide 25s linear infinite;
 }
+
 .logos img {
   width: 75px;
   height: 64px;
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
+
 .logos img:hover { transform: scale(1.2); }
+
 @keyframes slide {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -109,6 +118,7 @@ body {
   gap: 48px;
   padding: 80px 64px;
 }
+
 .project-card {
   flex: 1 1 300px;
   border-top: 0.5px solid;
@@ -117,10 +127,33 @@ body {
   flex-direction: column;
   gap: 50px;
 }
-.project-card img { border-radius: 4px; width: 100%; height: auto; }
-.project-title { font-size: 16px; font-family: Source Code Pro; font-weight: 500; text-decoration: underline; line-height: 16.48px; }
-.project-name { font-size: 50px; font-family: Source Serif Pro; font-weight: 300; line-height: 60px; }
-.explore { padding: 4px 10px; outline-offset: -1px; cursor: pointer; }
+
+.project-card img {
+  border-radius: 4px;
+  width: 100%;
+  height: auto;
+}
+
+.project-title {
+  font-size: 16px;
+  font-family: Source Code Pro;
+  font-weight: 500;
+  text-decoration: underline;
+  line-height: 16.48px;
+}
+
+.project-name {
+  font-size: 50px;
+  font-family: Source Serif Pro;
+  font-weight: 300;
+  line-height: 60px;
+}
+
+.explore {
+  padding: 4px 10px;
+  outline-offset: -1px;
+  cursor: pointer;
+}
 
 /* ---------- FOOTER ---------- */
 .footer {
@@ -131,6 +164,7 @@ body {
   align-items: center;
   gap: 30px;
 }
+
 .footer-links {
   width: 100%;
   display: flex;
@@ -139,33 +173,105 @@ body {
   font-weight: 300;
   text-decoration: underline;
 }
+
 .footer a.email { color: #AB0782; }
 .footer a.github { color: #5F00AD; }
 .footer a.linkedin { color: #0034AD; }
 .footer p { font-size: 30px; font-weight: 300; }
 
 /* ---------- ANIMATIONS ---------- */
-.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 1.2s ease-out, transform 1.2s ease-out; }
-.fade-in.appear { opacity: 1; transform: translateY(0); }
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px) {
-  .hero h1, .companies h2, .project-title, .project-name, .footer-links { font-size: clamp(16px, 4vw, 24px); line-height: clamp(20px, 4.5vw, 32px); }
-  .footer-links { flex-direction: column; align-items: center; gap: 20px; }
-  .header { flex-direction: column; gap: 20px; }
-  .logos { animation: slide 15s linear infinite; }
-  .projects { gap: 32px; padding: 40px 20px; }
-  .project-card { padding: 20px 0; gap: 30px; }
-}
+  /* Hero, Companies, Projects, Footer text */
+  .hero h1, .companies h2, .project-title, .project-name, .footer-links {
+    font-size: clamp(16px, 4vw, 24px);
+    line-height: clamp(20px, 4.5vw, 32px);
+  }
 
-/* ---------- ABOUT PAGE ---------- */
-.about-page .hero {
-  padding: 80px 100px 40px;
-}
+  /* Header */
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+  }
 
-/* For phone */
-@media (max-width: 768px) {
-  .about-page .hero {
-    padding: 60px 50px 30px;
+  .logo {
+    justify-content: flex-start;
+  }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo span {
+    font-size: 20px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    margin-right: 20px;
+  }
+
+  .nav a { font-size: 16px; }
+
+  /* Companies / Logos */
+  .companies {
+    padding: 40px 20px;
+  }
+
+  .logos img {
+    width: 55px;
+    height: 48px;
+  }
+
+  /* Projects */
+  .projects {
+    gap: 30px;
+    padding: 40px 20px;
+  }
+
+  .project-card {
+    padding: 30px 0;
+    gap: 20px;
+  }
+
+  .project-name {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .project-title {
+    font-size: 14px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    font-size: 26px;
+    gap: 12px;
+  }
+
+  .footer p {
+    font-size: 18px;
   }
 }
